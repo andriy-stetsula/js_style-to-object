@@ -7,7 +7,7 @@
  */
 
 function convertToObject(styles) {
-  const result = {};
+  const stylesMap = {};
 
   styles.split(';').forEach((item) => {
     if (!item.trim()) {
@@ -20,10 +20,10 @@ function convertToObject(styles) {
       return;
     }
 
-    result[key.trim()] = value.trim();
+    stylesMap[key.trim()] = value.trim();
   });
 
-  return result;
+  return stylesMap;
 }
 
 module.exports = convertToObject;
